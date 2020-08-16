@@ -1,0 +1,22 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-app-dev
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:dev-*
+spec:
+  releaseName: echo-app-dev
+  chart:
+    git: git@github.com:natalicot/echo_app_helm_chart.git
+    path: charts/echo
+    ref: master
+  values:
+    image:
+      repository: natalicot/echo-app
+      tag: dev-fixx4yrf
+    replicaCount: 1
+    hpa:
+      enabled: false
