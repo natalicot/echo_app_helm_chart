@@ -11,7 +11,7 @@ spec:
   releaseName: echo-app-stg
   chart:
     git: git@github.com:natalicot/echo_app_helm_chart
-    path: echo_app_helm_chart/echo
+    path: charts/echo
     ref: master
   values:
     image:
