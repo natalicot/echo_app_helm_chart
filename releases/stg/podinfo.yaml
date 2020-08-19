@@ -6,7 +6,7 @@ metadata:
   namespace: stg
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: glob:stg-*
+    filter.fluxcd.io/chart-image: glob:staging-*
 spec:
   releaseName: echo-app-stg
   chart:
@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: stefanprodan/podinfo
-      tag: stg-9ij63o4c
+      tag: staging-22e546b8d20bad4c1d1833e45116388d5ee19d3a
     replicaCount: 2
     hpa:
       enabled: true
