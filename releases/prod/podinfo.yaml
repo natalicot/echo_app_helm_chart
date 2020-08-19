@@ -15,6 +15,6 @@ spec:
     ref: master
   values:
     image:
-      repository: stefanprodan/podinfo
+      repository: natalicot/echo-app
       tag: 1.0.18
     replicaCount: 3
