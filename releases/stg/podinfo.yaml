@@ -17,7 +17,7 @@ spec:
     image:
       repository: natalicot/echo-app
       tag: staging-22e546b8d20bad4c1d1833e45116388d5ee19d3a
-    replicaCount: 2
+    replicaCount: 1
     hpa:
       enabled: true
       maxReplicas: 10
