@@ -8,7 +8,7 @@ metadata:
 data:
   PORT: '3000'
   LOGLEVEL: 'debug'
-  PERSIST: true
+  PERSIST: 'true'
   MONGODBURL:  'mongodb://mongodb-0.mongodb,mongodb-1.mongodb,mongodb-2.mongodb:27017/echo-staging?authSource=admin'
   DBNAME: 'echo-staging'
 
