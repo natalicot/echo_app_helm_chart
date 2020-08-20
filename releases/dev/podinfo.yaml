@@ -12,7 +12,7 @@ spec:
   chart:
     git: git@github.com:natalicot/echo_app_helm_chart.git
     path: charts/echo
-    ref: master
+    ref: dev
   values:
     image:
       repository: natalicot/echo-app
