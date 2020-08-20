@@ -1,0 +1,25 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-app-stg
+  namespace: stg
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:staging-*
+spec:
+  releaseName: echo-app-stg
+  chart:
+    git: git@github.com:natalicot/echo_app_helm_chart
+    path: charts/echo
+    ref: stg
+  values:
+    image:
+      repository: natalicot/echo-app
+      tag: staging-22e546b8d20bad4c1d1833e45116388d5ee19d3a
+    replicaCount: 1
+    hpa:
+      enabled: true
+      maxReplicas: 10
+      cpu: 50
+      memory: 256Mi
