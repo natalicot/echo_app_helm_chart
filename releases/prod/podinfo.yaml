@@ -16,5 +16,5 @@ spec:
   values:
     image:
       repository: natalicot/echo-app
-      tag: 1.0.18
+      tag: 1.0.20
     replicaCount: 1

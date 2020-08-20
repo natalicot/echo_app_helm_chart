@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: natalicot/echo-app
-      tag: dev-57cc7403ba46e9a8e288885b5a8482153f26a5d0
+      tag: dev-2f1c313bb91afb85e19a8f00b58211edcc379b4c
     replicaCount: 1
     hpa:
       enabled: false
